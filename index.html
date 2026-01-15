@@ -54,13 +54,7 @@
       margin-bottom: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(220, 38, 38, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       border-left: 5px solid #ef4444;
-    }
-
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(220, 38, 38, 0.2);
     }
 
     section h2 {
@@ -91,19 +85,14 @@
     }
 
     .project {
-  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-  padding: 30px;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(220, 38, 38, 0.2);
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Ensures all cards in a row are same height */
-}
-    .project:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 12px 25px rgba(220, 38, 38, 0.4);
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      padding: 30px;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(220, 38, 38, 0.2);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .project h3 {
@@ -118,31 +107,22 @@
     }
     
     .tech-stack {
-  max-height: 0; /* Hidden by default */
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  background: rgba(255, 255, 255, 0.1); /* Subtle light background */
-  border-radius: 10px;
-  margin-top: 0;
-  padding: 0 15px;
-  border: none; /* Removing the heavy border for a cleaner look */
-  backdrop-filter: blur(5px);
-}
-
-    .project:hover .tech-stack {
-  max-height: 200px; /* Large enough to fit content */
-  opacity: 1;
-  margin-top: 15px;
-  padding: 15px;
-}
+      /* Made visible by default */
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-top: 15px;
+      padding: 15px;
+      backdrop-filter: blur(5px);
+    }
 
     .tech-stack h4 {
-  color: #fff;
-  font-size: 0.9em;
-  margin-bottom: 8px;
-  text-align: center;
-}
+      color: #fff;
+      font-size: 0.9em;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
     .tech-tags {
       display: flex;
       flex-wrap: wrap;
@@ -151,13 +131,13 @@
     }
 
     .tech-tag {
-  background: #fff;
-  color: #dc2626;
-  padding: 4px 10px;
-  border-radius: 15px;
-  font-size: 0.8em;
-  font-weight: 600;
-}
+      background: #fff;
+      color: #dc2626;
+      padding: 4px 10px;
+      border-radius: 15px;
+      font-size: 0.8em;
+      font-weight: 600;
+    }
 
     .contact-info {
       display: flex;
@@ -176,12 +156,6 @@
       color: #dc2626;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .contact-item a:hover {
-      color: #b91c1c;
-      text-decoration: underline;
     }
 
     footer {
@@ -200,39 +174,11 @@
     }
 
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2em;
-      }
-
-      header p {
-        font-size: 1.1em;
-      }
-
-      section {
-        padding: 25px;
-      }
-
-      section h2 {
-        font-size: 1.6em;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .tech-stack {
-        position: static;
-        transform: none;
-        margin-top: 15px;
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      .project:hover .tech-stack {
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-      }
+      header h1 { font-size: 2.2em; }
+      header p { font-size: 1.1em; }
+      section { padding: 25px; }
+      section h2 { font-size: 1.6em; }
+      .projects-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -253,11 +199,10 @@
     <section>
       <h2>Projects</h2>
       <div class="projects-grid">
-        
         <a href="https://closetculture.co.ke" target="_blank" class="project-link">
           <div class="project">
             <h3>Closet Culture</h3>
-            <p> Fashion site to buy, sell, and discover Kenyan fashion.</p>
+            <p>Fashion site to buy, sell, and discover Kenyan fashion.</p>
             <div class="tech-stack">
               <h4>Tech Stack</h4>
               <div class="tech-tags">
@@ -270,10 +215,10 @@
           </div>
         </a>
         
-<a href="https://latitude.co.ke" target="_blank" class="project-link">
+        <a href="https://latitude.co.ke" target="_blank" class="project-link">
           <div class="project">
             <h3>Latitude</h3>
-            <p>Latitude Digital is Kenya’s girl-powered growth marketing agency. </p>
+            <p>Latitude Digital is Kenya’s girl-powered growth marketing agency.</p>
             <div class="tech-stack">
               <h4>Tech Stack</h4>
               <div class="tech-tags">
