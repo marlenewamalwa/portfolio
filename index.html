@@ -91,16 +91,16 @@
     }
 
     .project {
-      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-      padding: 30px;
-      border-radius: 15px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(220, 38, 38, 0.2);
-      position: relative;
-      overflow: visible;
-    }
-
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  padding: 30px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(220, 38, 38, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures all cards in a row are same height */
+}
     .project:hover {
       transform: translateY(-8px) scale(1.02);
       box-shadow: 0 12px 25px rgba(220, 38, 38, 0.4);
@@ -118,39 +118,31 @@
     }
     
     .tech-stack {
-      position: absolute;
-      bottom: -80px;
-      left: 50%;
-      transform: translateX(-50%) scale(0.9);
-      background: rgba(255, 255, 255, 0.95);
-      padding: 15px 20px;
-      border-radius: 10px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 10;
-      min-width: 250px;
-      border: 2px solid #dc2626;
-        margin-top: 15px;
-    backdrop-filter: blur(10px);
-    }
+  max-height: 0; /* Hidden by default */
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.1); /* Subtle light background */
+  border-radius: 10px;
+  margin-top: 0;
+  padding: 0 15px;
+  border: none; /* Removing the heavy border for a cleaner look */
+  backdrop-filter: blur(5px);
+}
 
     .project:hover .tech-stack {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) scale(1);
-      bottom: -90px;
-    }
+  max-height: 200px; /* Large enough to fit content */
+  opacity: 1;
+  margin-top: 15px;
+  padding: 15px;
+}
 
     .tech-stack h4 {
-      color: #b91c1c;
-      font-size: 0.9em;
-      margin-bottom: 8px;
-      text-align: center;
-      font-weight: 600;
-    }
-
+  color: #fff;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  text-align: center;
+}
     .tech-tags {
       display: flex;
       flex-wrap: wrap;
@@ -159,14 +151,13 @@
     }
 
     .tech-tag {
-      background: #fef2f2;
-      color: #dc2626;
-      padding: 4px 10px;
-      border-radius: 15px;
-      font-size: 0.8em;
-      font-weight: 500;
-      border: 1px solid #fecaca;
-    }
+  background: #fff;
+  color: #dc2626;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
 
     .contact-info {
       display: flex;
