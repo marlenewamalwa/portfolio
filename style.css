@@ -74,6 +74,11 @@ h2::after {
   color: #e63946;
   margin-bottom: 8px;
 }
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 
 /* Links */
 a {
