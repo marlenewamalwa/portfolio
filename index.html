@@ -121,11 +121,10 @@
     position: relative; overflow: hidden;
   }
 
-  /* ── FIXED: hero image area ── */
   .hero-img-area {
     position: absolute;
     inset: 0;
-    bottom: 110px; /* leave room for stats */
+    bottom: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,7 +133,6 @@
     padding: 2rem;
   }
 
-  /* ── FIXED: smaller portrait image ── */
   .hero-image {
     width: 130px;
     height: 130px;
@@ -184,7 +182,7 @@
     text-transform: uppercase; color: var(--light); margin-top: 0.2rem;
   }
 
-  /* ── ABOUT — FIXED layout ── */
+  /* ABOUT */
   #about { display: grid; grid-template-columns: 1fr 2fr; border-top: 1px solid var(--border); }
 
   .about-label {
@@ -200,7 +198,6 @@
     font-weight: 700; line-height: 1.15; letter-spacing: -0.01em;
   }
 
-  /* ── FIXED: detail rows inside about-label ── */
   .about-details { display: flex; flex-direction: column; }
   .detail-row {
     display: flex; justify-content: space-between;
@@ -229,7 +226,6 @@
   .project-row:hover { background: var(--white); }
   .project-row:hover .project-arrow { opacity: 1; transform: translateX(0); }
 
-  /* ── NEW: circular site logo placeholder ── */
   .project-logo {
     width: 52px;
     height: 52px;
@@ -248,7 +244,6 @@
     object-fit: cover;
     border-radius: 50%;
   }
-  /* Fallback initials if no image */
   .project-logo-fallback {
     font-family: var(--serif);
     font-size: 1.1rem;
@@ -267,7 +262,7 @@
     opacity: 0; transform: translateX(-8px); transition: all 0.25s; white-space: nowrap;
   }
 
-  /* SKILLS — FIXED broken HTML */
+  /* SKILLS */
   #skills { border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 2fr; }
   .skills-label { padding: 5rem 4% 5rem 6%; border-right: 1px solid var(--border); }
   .skills-body { padding: 5rem 6%; }
@@ -280,8 +275,6 @@
   .skill-item { display: flex; flex-direction: column; gap: 0.5rem; }
   .skill-row-top { display: flex; justify-content: space-between; }
   .skill-row-name { font-size: 0.88rem; color: var(--ink); }
-  
-  
 
   /* CONTACT */
   #contact { border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; }
@@ -366,7 +359,6 @@
   </div>
   <div class="hero-right">
     <div class="hero-img-area">
-      <!-- Smaller, properly contained portrait -->
       <div class="hero-image">
         <img src="images/Marlene.jpeg" alt="Marlene portrait">
       </div>
@@ -392,7 +384,7 @@
   </div>
 </section>
 
-<!-- ABOUT — FIXED: details now correctly inside about-label -->
+<!-- ABOUT -->
 <section id="about">
   <div class="about-label reveal">
     <div>
@@ -416,7 +408,7 @@
   </div>
 </section>
 
-<!-- PROJECTS — FIXED: circle logo placeholders instead of numbers -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="projects-header">
     <div class="projects-label reveal">
@@ -432,12 +424,8 @@
 
     <div class="project-row reveal">
       <div class="project-logo">
-        <!-- Placeholder: replace src with actual favicon/logo once available -->
-        <img 
-          src="images/creatives.png" 
-          alt="Creatives Connect logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        >
+        <img src="images/creatives.png" alt="Creatives Connect logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <span class="project-logo-fallback" style="display:none;">CC</span>
       </div>
       <div>
@@ -450,11 +438,8 @@
 
     <div class="project-row reveal">
       <div class="project-logo">
-        <img 
-          src="images/visitsasa.jpg" 
-          alt="Visit Sasa logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        >
+        <img src="images/visitsasa.jpg" alt="Visit Sasa logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <span class="project-logo-fallback" style="display:none;">VS</span>
       </div>
       <div>
@@ -467,11 +452,8 @@
 
     <div class="project-row reveal">
       <div class="project-logo">
-        <img 
-          src="images/4mlogo.png" 
-          alt="Fourth Media logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        >
+        <img src="images/4mlogo.png" alt="Fourth Media logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <span class="project-logo-fallback" style="display:none;">FM</span>
       </div>
       <div>
@@ -484,11 +466,8 @@
 
     <div class="project-row reveal">
       <div class="project-logo">
-        <img 
-          src="images/latitude.png" 
-          alt="Latitude logo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        >
+        <img src="images/latitude.png" alt="Latitude logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <span class="project-logo-fallback" style="display:none;">La</span>
       </div>
       <div>
@@ -502,7 +481,7 @@
   </div>
 </section>
 
-<!-- SKILLS — FIXED: proper closed HTML structure with working skill bars -->
+<!-- SKILLS -->
 <section id="skills">
   <div class="skills-label reveal">
     <div class="section-num">03 — Skills</div>
@@ -514,58 +493,34 @@
       <div class="reveal">
         <div class="skill-group-title">Front-end</div>
         <div class="skill-bars">
-          <div class="skill-item">
-            <div class="skill-row-top"><span class="skill-row-name">React</span></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-row-top"><span class="skill-row-name">TypeScript</span></div>
-            
-          </div>
-          <div class="skill-item">
-            <div class="skill-row-top"><span class="skill-row-name">CSS / Tailwind</span></div>
-          
-          </div>
-          <div class="skill-item">
-            <div class="skill-row-top"><span class="skill-row-name">Vite</span></div>
-           
-          </div>
+          <div class="skill-item"><div class="skill-row-top"><span class="skill-row-name">React</span></div></div>
+          <div class="skill-item"><div class="skill-row-top"><span class="skill-row-name">TypeScript</span></div></div>
+          <div class="skill-item"><div class="skill-row-top"><span class="skill-row-name">CSS / Tailwind</span></div></div>
+          <div class="skill-item"><div class="skill-row-top"><span class="skill-row-name">Vite</span></div></div>
         </div>
       </div>
 
       <div class="reveal">
         <div class="skill-group-title">Back-end</div>
         <div class="skill-bars">
-          <div class="skill-item">
-            <div class="skill-row-top"><span class="skill-row-name">Node.js / Express</span></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-row-top"><span class="skill-row-name">PostgreSQL / MongoDB</span></div>
-             </div>
+          <div class="skill-item"><div class="skill-row-top"><span class="skill-row-name">Node.js / Express</span></div></div>
+          <div class="skill-item"><div class="skill-row-top"><span class="skill-row-name">PostgreSQL / MongoDB</span></div></div>
         </div>
       </div>
 
       <div class="reveal">
         <div class="skill-group-title">Tools & Cloud</div>
         <div class="skill-bars">
-          <div class="skill-item">
-            <div class="skill-row-top"><span class="skill-row-name">Git / GitHub</span></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-row-top"><span class="skill-row-name">Vercel</span></div>
-          </div>
+          <div class="skill-item"><div class="skill-row-top"><span class="skill-row-name">Git / GitHub</span></div></div>
+          <div class="skill-item"><div class="skill-row-top"><span class="skill-row-name">Vercel</span></div></div>
         </div>
       </div>
 
       <div class="reveal">
         <div class="skill-group-title">Design</div>
         <div class="skill-bars">
-          <div class="skill-item">
-            <div class="skill-row-top"><span class="skill-row-name">Figma</span></div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-row-top"><span class="skill-row-name">UI / UX Principles</span></div>
-            
-          </div>
+          <div class="skill-item"><div class="skill-row-top"><span class="skill-row-name">Figma</span></div></div>
+          <div class="skill-item"><div class="skill-row-top"><span class="skill-row-name">UI / UX Principles</span></div></div>
         </div>
       </div>
 
@@ -582,15 +537,23 @@
       <p class="contact-sub">Have a project in mind? I'd love to hear about it. Send me a message and I'll get back to you within 24 hours.</p>
       <div class="contact-details">
         <div class="cdetail">
-          <div class="cdetail-icon"></div>
-          <div><div class="cdetail-label">Email</div><div class="cdetail-val">wamalwamarlene@gmail.com</div></div>
+          <div class="cdetail-icon">✉</div>
+          <div>
+            <div class="cdetail-label">Email</div>
+            <div class="cdetail-val">
+              <a href="mailto:wamalwamarlene@gmail.com" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--border);transition:border-color 0.2s;"
+                onmouseover="this.style.borderColor='var(--ink)'" onmouseout="this.style.borderColor='var(--border)'">
+                wamalwamarlene@gmail.com
+              </a>
+            </div>
+          </div>
         </div>
         <div class="cdetail">
-          <div class="cdetail-icon"></div>
+          <div class="cdetail-icon">📍</div>
           <div><div class="cdetail-label">Based in</div><div class="cdetail-val">Nairobi, Kenya</div></div>
         </div>
         <div class="cdetail">
-          <div class="cdetail-icon"></div>
+          <div class="cdetail-icon">✦</div>
           <div><div class="cdetail-label">Status</div><div class="cdetail-val">Available for freelance & full-time</div></div>
         </div>
       </div>
@@ -601,11 +564,12 @@
     </div>
   </div>
   <div class="contact-right reveal">
-    <form class="contact-form" onsubmit="return false;">
-      <div><label class="cf-label">Name</label><input type="text" class="cf-input" placeholder="Your full name"></div>
-      <div><label class="cf-label">Email</label><input type="email" class="cf-input" placeholder="your@email.com"></div>
-      <div><label class="cf-label">Subject</label><input type="text" class="cf-input" placeholder="What's this about?"></div>
-      <div><label class="cf-label">Message</label><textarea class="cf-textarea" placeholder="Tell me about your project, timeline, and budget…"></textarea></div>
+    <!-- Form collects values then opens mailto on submit -->
+    <form class="contact-form" id="contactForm">
+      <div><label class="cf-label">Name</label><input type="text" id="cf-name" class="cf-input" placeholder="Your full name"></div>
+      <div><label class="cf-label">Email</label><input type="email" id="cf-email" class="cf-input" placeholder="your@email.com"></div>
+      <div><label class="cf-label">Subject</label><input type="text" id="cf-subject" class="cf-input" placeholder="What's this about?"></div>
+      <div><label class="cf-label">Message</label><textarea id="cf-message" class="cf-textarea" placeholder="Tell me about your project, timeline, and budget…"></textarea></div>
       <button type="submit" class="btn btn-dark">Send message →</button>
     </form>
   </div>
@@ -629,19 +593,6 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-  // Skill bars — animate on scroll
-  const barObs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const w = e.target.dataset.w;
-        e.target.style.transform = `scaleX(${w})`;
-        e.target.classList.add('go');
-        barObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.3 });
-  document.querySelectorAll('.bar-fill').forEach(f => barObs.observe(f));
-
   // Active nav highlight
   const sections = document.querySelectorAll('section[id]');
   const navAs = document.querySelectorAll('.nav-links a');
@@ -651,6 +602,23 @@
     navAs.forEach(a => {
       a.style.color = a.getAttribute('href') === `#${cur}` ? 'var(--ink)' : '';
     });
+  });
+
+  // Contact form → mailto
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name    = document.getElementById('cf-name').value.trim();
+    const email   = document.getElementById('cf-email').value.trim();
+    const subject = document.getElementById('cf-subject').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
+
+    const mailSubject = encodeURIComponent(subject || 'Portfolio enquiry');
+    const mailBody = encodeURIComponent(
+      `Hi Marlene,\n\n${message}\n\n---\nFrom: ${name}${email ? '\nReply-to: ' + email : ''}`
+    );
+
+    window.location.href = `mailto:wamalwamarlene@gmail.com?subject=${mailSubject}&body=${mailBody}`;
   });
 </script>
 </body>
